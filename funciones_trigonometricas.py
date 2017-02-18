@@ -18,6 +18,7 @@ def calculosTrigonometricos(z):
     """
     resultados = []
 
+    resultados.append(exp_cmplx.expz(z))
     resultados.append(cmplxsin(z))
     resultados.append(cmplxcos(z))
     resultados.append(cmplxtan(z))

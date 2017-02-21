@@ -18,56 +18,19 @@ def calculosTrigonometricos(z):
     """
     resultados = []
 
-    resultados.append(exp_cmplx.expz(z))
-    resultados.append(cmplxsin(z))
-    resultados.append(cmplxcos(z))
-    resultados.append(cmplxtan(z))
+    resultados.append(cmath.sin(z))
+    resultados.append(cmath.cos(z))
+    resultados.append(cmath.tan(z))
     resultados.append(cmplxcsc(z))
     resultados.append(cmplxsec(z))
     resultados.append(cmplxcot(z))
-    resultados.append(cmplxsenh(z))
-    resultados.append(cmplxcosh(z))
-    resultados.append(cmplxtanh(z))
+    resultados.append(cmath.sinh(z))
+    resultados.append(cmath.cosh(z))
+    resultados.append(cmath.tanh(z))
 
     return resultados
 
 #Fin funcion calculosTrigonometricos
-
-def cmplxsin(z):
-    """
-    cmplxsin(z) -> z0
-
-    Calcula el seno de un número complejo.
-
-    Argumento:
-    z = numero complejo
-    """
-    return (exp_cmplx.expiz(z) - exp_cmplx.expiz(z, True) ) / 2j
-#Fin función cmplxsin
-
-def cmplxcos(z):
-    """
-    cmplxcos(z) -> z0
-
-    Calcula el coseno de un número complejo.
-
-    Argumento:
-    z = numero complejo
-    """
-    return (exp_cmplx.expiz(z) + exp_cmplx.expiz(z, True) ) / 2
-#Fin funcion cmplxcos
-
-def cmplxtan(z):
-    """
-    cmplxtan(z) -> zs
-
-    Calcula la tangente de un número complejo.
-
-    Argumento:
-    z = numero complejo
-    """
-    return cmplxsin(z) / cmplxcos(z)
-#Fin funcion cmplxtan
 
 def cmplxcsc(z):
     """
@@ -78,7 +41,7 @@ def cmplxcsc(z):
     Argumento:
     z = numero complejo
     """
-    return 1 / cmplxsin(z)
+    return 1 / cmath.sin(z)
 #Fin funcion cmplxcsc
 
 def cmplxsec(z):
@@ -90,7 +53,7 @@ def cmplxsec(z):
     Argumento:
     z = numero complejo
     """
-    return 1 / cmplxcos(z)
+    return 1 / cmath.cos(z)
 #Fin función cmplxsec
 
 def cmplxcot(z):
@@ -102,41 +65,5 @@ def cmplxcot(z):
     Argumento:
     z = numero complejo
     """
-    return 1 / cmplxtan(z)
+    return 1 / cmath.tan(z)
 #Fin función cmplxcot
-
-def cmplxsenh(z):
-    """
-    cmplxsenh(z) -> z0
-
-    Calcula el seno hiperbólico de un número complejo.
-
-    Argumento:
-    z = numero complejo
-    """
-    return (exp_cmplx.expz(z) - exp_cmplx.expz(z, True) ) / 2
-#Fin funcion cmplxsenh
-
-def cmplxcosh(z):
-    """
-    cmplxsenh(z) -> z0
-
-    Calcula el coseno hiperbólico de un número complejo.
-
-    Argumento:
-    z = numero complejo
-    """
-    return (exp_cmplx.expz(z) + exp_cmplx.expz(z, True) ) / 2
-#Fin función cmplxcosh
-
-def cmplxtanh(z):
-    """
-    cmplxtanh(z) -> z0
-
-    Calcula el seno hiperbólico de un número complejo.
-
-    Argumento:
-    z = numero complejo
-    """
-    return cmplxsenh(z) / cmplxcosh(z)
-#Fin función cmplxtanh

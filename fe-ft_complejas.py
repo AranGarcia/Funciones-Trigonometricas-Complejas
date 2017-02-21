@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import cmath
 import funciones_trigonometricas as ft
 import grafica_complejos as graf
 
@@ -18,9 +19,10 @@ while entradaInvalida:
 
 
 resultados = ft.calculosTrigonometricos(z)
+resultados.insert(0, cmath.exp(z))
 
 funciones = ("exp(z) =", "sen(z) =", "cos(z) =", "tan(z) =", "csc(z) =",
-    "cot(z) =", "sec(z) =", "senh(z) =", "cosh(z) =", "tanh(z) =")
+    "sec(z) =", "cot(z) =", "senh(z) =", "cosh(z) =", "tanh(z) =")
 
 for i in range( len(resultados) ):
     print( funciones[i], resultados[i] )

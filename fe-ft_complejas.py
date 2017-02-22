@@ -20,8 +20,9 @@ while entradaInvalida:
 
 resultados = ft.calculosTrigonometricos(z)
 resultados.insert(0, cmath.exp(z))
+resultados.insert(0, z)
 
-funciones = ("exp(z) =", "sen(z) =", "cos(z) =", "tan(z) =", "csc(z) =",
+funciones = ("z =", "exp(z) =", "sen(z) =", "cos(z) =", "tan(z) =", "csc(z) =",
     "sec(z) =", "cot(z) =", "senh(z) =", "cosh(z) =", "tanh(z) =")
 
 for i in range( len(resultados) ):

@@ -25,10 +25,10 @@ def graficar_complejos(z, lista_complejos = None, ):
     plt.grid()
 
     #Dibuja lineas desde el origen al número complejo
-    etiquetas = ("e^z", "sen(z)", "cos(z)", "tan(z)", "csc(z)", "sec(z)",
+    etiquetas = ("z", "e^z", "sen(z)", "cos(z)", "tan(z)", "csc(z)", "sec(z)",
         "cot(z)", "senh(z)", "cosh(z)", "tanh(z)")
 
-    tipos_lineas = ("bo", "go", "ro", "co", "mo", "yo", "ko", "bD", "rD", "gD")
+    tipos_lineas = ("r*","bo", "go", "ro", "co", "mo", "yo", "ko", "bD", "rD", "gD")
 
     for i in range(len(lista_complejos)):
         plt.plot([numpy.real(lista_complejos[i])], [numpy.imag(lista_complejos[i])],
